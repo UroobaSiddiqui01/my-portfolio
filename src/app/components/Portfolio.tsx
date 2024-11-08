@@ -104,7 +104,7 @@ const Portfolio: React.FC = () => {
     projects[currentProject];
 
   return (
-    <section id="Portfolio" className="py-16 px-4 bg-pink-50">
+    <section id="Portfolio" className="w-auto max-w-screen-2xl mx-auto py-16 px-4 bg-pink-50">
       <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 mb-8">
         My Projects
       </h2>

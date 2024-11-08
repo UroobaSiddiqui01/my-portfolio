@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,16 +21,21 @@ const Header = () => {
   }, []);
 
   return (
+    <div className='flex justify-center w-full fixed top-0 z-50'>
     <header
-      className={`fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 ${
+      className={`fixed  w-full max-w-screen-2xl mx-auto z-50 py-4 transition-all duration-300 ${
         isScrolled ? 'bg-pink-100 shadow-md' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center px-4 lg:px-8">
+      <div className="container mx-auto flex items-center justify-between px-6">
         {/* Logo Section */}
-        <div className="text-lg lg:text-2xl font-bold text-pink-600">
-          UROOBA SIDDIQUI
-        </div>
+          <Image 
+         src="/Black Cream Elegant Monogram Initial Name I C Logo .png" 
+         alt="Logo"
+         width={100}
+         height={100} 
+         className='w-16 h-16'/>
+        
 
         {/* Navigation Links (Hidden on mobile, visible on larger screens) */}
         <nav className="hidden md:flex space-x-4 lg:space-x-8 text-gray-700">
@@ -43,8 +48,8 @@ const Header = () => {
           <Link href="/#services" className="hover:text-pink-500 transition">
             Services
           </Link>
-          <Link href="/#portfolio" className="hover:text-pink-500 transition">
-            Portfolio
+          <Link href="https://resume-css-h9b1.vercel.app/" className="hover:text-pink-500 transition">
+            Resume
           </Link>
         </nav>
 
@@ -97,8 +102,8 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" className="hover:text-pink-500 transition" onClick={toggleMenu}>
-                Portfolio
+              <Link href="/https://resume-css-h9b1.vercel.app/" className="hover:text-pink-500 transition" onClick={toggleMenu}>
+                Resume
               </Link>
             </li>
             <li>
@@ -110,6 +115,7 @@ const Header = () => {
         </nav>
       )}
     </header>
+    </div>
   );
 };
 

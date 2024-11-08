@@ -5,7 +5,6 @@ import Contact from '@/app/components/contact';
 import Portfolio from '@/app/components/Portfolio';
 import Footer from './components/footer'; 
 
-
 const Home = () => {
 
 return(

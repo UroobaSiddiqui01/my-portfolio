@@ -2,7 +2,7 @@ import { FaPalette, FaMobileAlt, FaUsers } from 'react-icons/fa'; // Icons for s
 
 const Services = () => {
   return (
-    <section id="services" className="bg-pink-50 py-12 lg:py-24">
+    <section id="services" className="w-auto max-w-screen-2xl mx-auto bg-pink-50 py-12 lg:py-24">
       <div className="container mx-auto px-4 lg:px-8 text-center">
         {/* Section Title */}
         <h2 className="text-3xl lg:text-5xl font-bold text-pink-600 mb-8">
